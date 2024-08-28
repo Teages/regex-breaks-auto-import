@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
-import AutoImport from 'unplugin-auto-import/vite'
+import Unimport from 'unimport/unplugin'
 
 export default defineConfig({
   plugins: [
-    AutoImport({
-      dirs: ['./utils/**'],
-      dts: './src/auto-imports.d.ts',
+    Unimport.vite({
+      imports: [{ name: 'logSomething', from: './utils/some.ts' }],
+      dts: './src/unimport.d.ts',
     }),
   ],
 })
