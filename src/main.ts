@@ -23,10 +23,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 
-function verifyEmail(email: string) {
-  const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-  return emailRegex.test(email) ? 'yes' : 'nope'
+function verify(email: string) {
+  const regex = /^[/`]/
+  return regex.test(email) ? 'yes' : 'nope'
 }
-console.log(verifyEmail('hello@world.com'))
+console.log(verify('/'))
 
 logSomething()
