@@ -4,7 +4,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 export default defineConfig({
   plugins: [
     AutoImport({
-      dirs: ['./utils/**'],
+      dirs: ['./src/utils/**'],
       dts: './src/auto-imports.d.ts',
     }),
   ],
